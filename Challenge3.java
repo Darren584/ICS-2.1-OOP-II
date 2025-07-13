@@ -1,13 +1,19 @@
-public class Challenge3 {
-    public static void main(String[] args) {
-        int score = 75;
+import java.util.Scanner;
 
-        if (score >= 80) {
-            System.out.println("You passed with distinction!");
-        } else if (score >= 50) {
-            System.out.println("You passed!");
+public class LicenseEligibility {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are eligible for a full driver's license.");
+        } else if (age >= 16) {
+            System.out.println("You are eligible for a learner's permit.");
         } else {
-            System.out.println("You failed. Try again!");
+            System.out.println("You are not eligible for a driver's license yet.");
         }
+
+        input.close();
     }
 }
